@@ -1,0 +1,63 @@
+@use '../abstract' as *;
+
+.footer {
+    background-color: $clr-secondary;
+    padding: 5rem;
+    
+    &__wrapper {
+        @include mediaQueryMax {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include flex (space-between, flex-start);
+        gap: 2rem; 
+        }
+
+        &__icons {
+            ul {
+                @include flex (center, center);
+                gap: 3rem;
+            }
+            i {
+                font-size: 1.8em;
+                color: $clr-accent;
+            }
+
+        }
+
+        &__contacts {
+            text-align: center;
+            p {
+                color: $clr-light;
+                font-family: "montserrat-bold";
+                line-height: 1.7;
+                text-align: center;
+            }
+            
+        }
+
+        &__button {
+        button {
+            font-size: 1em;
+            text-transform: uppercase;
+            border-radius: 10px;
+            border-style: none;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+
+            font-family: "montserrat-bold";
+            line-height: 1.7;
+
+            background-color: $clr-accent;
+            color: $clr-light;
+        }
+
+        button:hover {
+            background-color: $clr-red;
+            color: $clr-light;
+        }
+        }
+}

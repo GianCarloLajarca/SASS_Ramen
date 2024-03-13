@@ -1,0 +1,45 @@
+@use '../abstract' as *;
+
+.btn {
+    width: 100%;
+    padding: 1.2rem 1rem;
+    border: 1px solid $clr-accent;
+    background: transparent;
+    transition: .5s ease;
+    color:  $clr-light;
+    background-color: $clr-accent;
+    border-radius: 5rem;
+    @include mediaQuery {
+        width: 20%;
+    }
+    &:hover {
+        background: $clr-dark;
+        color: $clr-light;
+    }
+}
+
+// .btn {
+//     padding: 1.5rem 2.5rem;
+//     margin: 2rem 0;
+//     border-radius: 1rem;
+//     font-family: "clash-display-bold";
+//     @include flex(center, center);
+//     line-height: 1;
+//     transition: .5s ease;
+//     text-transform: uppercase;
+   
+//     $colors: (
+//     "light" : $clr-light,
+//     "dark" : $clr-dark,
+//     );
+
+//     @each $key, $val in $colors {
+
+//     &-#{$key} {
+//         background: #{$val};
+//         &:hover {
+//             background: #{$val};
+//             }
+//         }
+//     }
+// }
